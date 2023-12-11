@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="fileName">logs/ap.log</Property>
+        <Property name="fileNamePattern">logs/ap-%d{dd-MM-yyyy}-%i.log</Property>
+        <Property name="logPattern">%highlight{%d [%30.30t] %50.50c{10} %-5level : %msg%n%throwable}</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${logPattern}"/>
+        </Console>
+        <RollingFile name="file" fileName="${fileName}"
+                     filePattern="${fileNamePattern}">
+            <PatternLayout pattern="${logPattern}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="20 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="100"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="file"/>
+        </Root>
+        <Logger name="io.github.amings.mingle.utils.RestClientUtils" level="off">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="file"/>
+        </Logger>
+    </Loggers>
+</Configuration>

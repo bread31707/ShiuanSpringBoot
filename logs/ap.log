@@ -1,0 +1,164 @@
+2023-12-08T10:50:30.664+08:00  INFO 18184 --- [main] com.wuw.Application                      : Starting Application using Java 17.0.7 with PID 18184 (/Users/wuchengxuan/Desktop/Project/ShiuanSpringBoot/target/classes started by wuchengxuan in /Users/wuchengxuan/Desktop/Project/ShiuanSpringBoot)
+2023-12-08T10:50:30.782+08:00  INFO 18184 --- [main] com.wuw.Application                      : No active profile set, falling back to 1 default profile: "default"
+2023-12-08T10:50:32.445+08:00  INFO 18184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08T10:50:32.449+08:00  INFO 18184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-08T10:50:32.905+08:00  INFO 18184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 441 ms. Found 1 JPA repository interfaces.
+2023-12-08T10:50:32.941+08:00  INFO 18184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08T10:50:32.944+08:00  INFO 18184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08T10:50:32.983+08:00  INFO 18184 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.wuw.dao.repository.TestInfoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-12-08T10:50:32.984+08:00  INFO 18184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-12-08T10:50:34.093+08:00  INFO 18184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-08T10:50:34.117+08:00  INFO 18184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-08T10:50:34.118+08:00  INFO 18184 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-12-08T10:50:34.354+08:00  INFO 18184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/test]   : Initializing Spring embedded WebApplicationContext
+2023-12-08T10:50:34.357+08:00  INFO 18184 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3450 ms
+2023-12-08T10:50:34.700+08:00  INFO 18184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-08T10:50:34.986+08:00  INFO 18184 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@747835f5
+2023-12-08T10:50:34.990+08:00  INFO 18184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-08T10:50:35.076+08:00  INFO 18184 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-08T10:50:35.303+08:00  INFO 18184 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-12-08T10:50:35.309+08:00  INFO 18184 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-08T10:50:35.679+08:00  INFO 18184 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-12-08T10:50:35.926+08:00  INFO 18184 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-08T10:50:36.027+08:00  INFO 18184 --- [main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@7e050be1
+2023-12-08T10:50:36.656+08:00  INFO 18184 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-12-08T10:50:38.050+08:00  INFO 18184 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-08T10:50:38.063+08:00  INFO 18184 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08T10:50:40.162+08:00  WARN 18184 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-08T10:50:40.940+08:00  INFO 18184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/test'
+2023-12-08T10:50:40.962+08:00  INFO 18184 --- [main] com.wuw.Application                      : Started Application in 11.837 seconds (process running for 12.994)
+2023-12-08T10:54:05.832+08:00  INFO 18184 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/test]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08T10:54:05.832+08:00  INFO 18184 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-08T10:54:05.834+08:00  INFO 18184 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-08T10:54:06.209+08:00  INFO 18184 --- [http-nio-8080-exec-2] com.wuw.filter.LogFilter                 : Filter Logs : METHOD= POST; REQUSETURI = /test/Login; REQUSETBODY = {
+    "userId": "1077333",
+    "userName": "shiuan"
+}; RESPONSECODE = 200; RESPONSEBODY = {"code":"0000","msg":"交易成功","resModel":{}}; TIMETAKEN = 357
+2023-12-08T10:54:12.307+08:00  INFO 18184 --- [http-nio-8080-exec-3] com.wuw.filter.LogFilter                 : Filter Logs : METHOD= POST; REQUSETURI = /test/TestService; REQUSETBODY = {
+    "testStr": "一二三"
+}; RESPONSECODE = 200; RESPONSEBODY = {"code":"0000","msg":"交易成功","resModel":{"test":"一二三"}}; TIMETAKEN = 32
+2023-12-08T10:55:03.522+08:00  INFO 18184 --- [http-nio-8080-exec-4] com.wuw.filter.LogFilter                 : Filter Logs : METHOD= POST; REQUSETURI = /test/TestService; REQUSETBODY = {"testStr": "一二三"}; RESPONSECODE = 200; RESPONSEBODY = {"code":"0000","msg":"交易成功","resModel":{"test":"一二三"}}; TIMETAKEN = 3
+2023-12-08T10:55:45.725+08:00  INFO 18184 --- [http-nio-8080-exec-5] com.wuw.filter.LogFilter                 : Filter Logs : METHOD= POST; REQUSETURI = /test/TestService; REQUSETBODY = {
+    "testStr": "一二三"
+}; RESPONSECODE = 200; RESPONSEBODY = {"code":"0000","msg":"交易成功","resModel":{"test":"一二三"}}; TIMETAKEN = 4
+2023-12-08T11:01:49.114+08:00  INFO 18184 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08T11:01:49.121+08:00  INFO 18184 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-08T11:01:49.127+08:00  INFO 18184 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-08T11:01:58.246+08:00  INFO 18374 --- [main] com.wuw.Application                      : Starting Application using Java 17.0.7 with PID 18374 (/Users/wuchengxuan/Desktop/Project/ShiuanSpringBoot/target/classes started by wuchengxuan in /Users/wuchengxuan/Desktop/Project/ShiuanSpringBoot)
+2023-12-08T11:01:58.256+08:00  INFO 18374 --- [main] com.wuw.Application                      : No active profile set, falling back to 1 default profile: "default"
+2023-12-08T11:01:59.785+08:00  INFO 18374 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08T11:01:59.789+08:00  INFO 18374 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-08T11:02:00.150+08:00  INFO 18374 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 335 ms. Found 1 JPA repository interfaces.
+2023-12-08T11:02:00.178+08:00  INFO 18374 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08T11:02:00.180+08:00  INFO 18374 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08T11:02:00.204+08:00  INFO 18374 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.wuw.dao.repository.TestInfoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-12-08T11:02:00.204+08:00  INFO 18374 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2023-12-08T11:02:01.331+08:00  INFO 18374 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-08T11:02:01.350+08:00  INFO 18374 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-08T11:02:01.350+08:00  INFO 18374 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-12-08T11:02:01.572+08:00  INFO 18374 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/test]   : Initializing Spring embedded WebApplicationContext
+2023-12-08T11:02:01.573+08:00  INFO 18374 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3069 ms
+2023-12-08T11:02:01.976+08:00  INFO 18374 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-08T11:02:02.161+08:00  INFO 18374 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d15c0a1
+2023-12-08T11:02:02.163+08:00  INFO 18374 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-08T11:02:02.263+08:00  INFO 18374 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-08T11:02:02.392+08:00  INFO 18374 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-12-08T11:02:02.407+08:00  INFO 18374 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-08T11:02:02.703+08:00  INFO 18374 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-12-08T11:02:02.927+08:00  INFO 18374 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-08T11:02:03.071+08:00  INFO 18374 --- [main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@27896d3b
+2023-12-08T11:02:03.397+08:00  INFO 18374 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-12-08T11:02:04.549+08:00  INFO 18374 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-08T11:02:04.555+08:00  INFO 18374 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08T11:02:05.826+08:00  WARN 18374 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-08T11:02:06.515+08:00  INFO 18374 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/test'
+2023-12-08T11:02:06.531+08:00  INFO 18374 --- [main] com.wuw.Application                      : Started Application in 9.376 seconds (process running for 11.731)
+2023-12-08T11:02:13.375+08:00  INFO 18374 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/test]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08T11:02:13.377+08:00  INFO 18374 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-08T11:02:13.381+08:00  INFO 18374 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-12-08T11:03:14.695+08:00  WARN 18374 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s430ms).
+2023-12-08T11:03:14.699+08:00  INFO 18374 --- [http-nio-8080-exec-2] com.wuw.filter.LogFilter                 : Filter Logs : METHOD= POST; REQUSETURI = /test/TestService; REQUSETBODY = {
+    "testStr": "一二三"
+}; RESPONSECODE = 200; RESPONSEBODY = {"code":"0000","msg":"交易成功","resModel":{"test":"一二三"}}; TIMETAKEN = 482
+2023-12-08T11:03:14.828+08:00  INFO 18374 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08T11:03:14.831+08:00  INFO 18374 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-08T11:03:14.834+08:00  INFO 18374 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-08T11:11:49.439+08:00  INFO 18452 --- [main] com.wuw.Application                      : Starting Application using Java 17.0.7 with PID 18452 (/Users/wuchengxuan/Desktop/Project/ShiuanSpringBoot/target/classes started by wuchengxuan in /Users/wuchengxuan/Desktop/Project/ShiuanSpringBoot)
+2023-12-08T11:11:49.451+08:00  INFO 18452 --- [main] com.wuw.Application                      : No active profile set, falling back to 1 default profile: "default"
+2023-12-08T11:11:50.953+08:00  INFO 18452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08T11:11:50.957+08:00  INFO 18452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-08T11:11:51.342+08:00  INFO 18452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 370 ms. Found 1 JPA repository interfaces.
+2023-12-08T11:11:51.389+08:00  INFO 18452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08T11:11:51.391+08:00  INFO 18452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08T11:11:51.420+08:00  INFO 18452 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.wuw.dao.repository.TestInfoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-12-08T11:11:51.421+08:00  INFO 18452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2023-12-08T11:11:52.614+08:00  INFO 18452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-08T11:11:52.632+08:00  INFO 18452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-08T11:11:52.633+08:00  INFO 18452 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-12-08T11:11:52.894+08:00  INFO 18452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/test]   : Initializing Spring embedded WebApplicationContext
+2023-12-08T11:11:52.895+08:00  INFO 18452 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3293 ms
+2023-12-08T11:11:53.231+08:00  INFO 18452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-08T11:11:53.499+08:00  INFO 18452 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d15c0a1
+2023-12-08T11:11:53.507+08:00  INFO 18452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-08T11:11:53.584+08:00  INFO 18452 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-08T11:11:53.695+08:00  INFO 18452 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-12-08T11:11:53.700+08:00  INFO 18452 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-08T11:11:54.071+08:00  INFO 18452 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-12-08T11:11:54.379+08:00  INFO 18452 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-08T11:11:54.527+08:00  INFO 18452 --- [main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@27896d3b
+2023-12-08T11:11:54.848+08:00  INFO 18452 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-12-08T11:11:55.902+08:00  INFO 18452 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-08T11:11:55.909+08:00  INFO 18452 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08T11:11:57.021+08:00  WARN 18452 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-08T11:11:57.710+08:00  INFO 18452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/test'
+2023-12-08T11:11:57.726+08:00  INFO 18452 --- [main] com.wuw.Application                      : Started Application in 9.873 seconds (process running for 11.568)
+2023-12-08T11:12:02.274+08:00  INFO 18452 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/test]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08T11:12:02.276+08:00  INFO 18452 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-08T11:12:02.279+08:00  INFO 18452 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-08T11:15:07.562+08:00  WARN 18452 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m13s954ms).
+2023-12-08T11:15:07.569+08:00  INFO 18452 --- [http-nio-8080-exec-2] com.wuw.filter.LogFilter                 : Filter Logs : METHOD= POST; REQUSETURI = /test/TestService; REQUSETBODY = {
+    "testStr": "一二三"
+}; RESPONSECODE = 200; RESPONSEBODY = {"code":"0000","msg":"交易成功","resModel":{"test":"一二三"}}; TIMETAKEN = 491
+2023-12-08T11:15:07.979+08:00  INFO 18452 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08T11:15:08.005+08:00  INFO 18452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-08T11:15:08.009+08:00  INFO 18452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-08T11:24:44.639+08:00  INFO 18570 --- [main] com.wuw.Application                      : Starting Application using Java 17.0.7 with PID 18570 (/Users/wuchengxuan/Desktop/Project/ShiuanSpringBoot/target/classes started by wuchengxuan in /Users/wuchengxuan/Desktop/Project/ShiuanSpringBoot)
+2023-12-08T11:24:44.646+08:00  INFO 18570 --- [main] com.wuw.Application                      : No active profile set, falling back to 1 default profile: "default"
+2023-12-08T11:24:46.255+08:00  INFO 18570 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08T11:24:46.258+08:00  INFO 18570 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-08T11:24:46.652+08:00  INFO 18570 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 379 ms. Found 1 JPA repository interfaces.
+2023-12-08T11:24:46.682+08:00  INFO 18570 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08T11:24:46.685+08:00  INFO 18570 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08T11:24:46.712+08:00  INFO 18570 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.wuw.dao.repository.TestInfoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-12-08T11:24:46.712+08:00  INFO 18570 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2023-12-08T11:24:47.897+08:00  INFO 18570 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-08T11:24:47.915+08:00  INFO 18570 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-08T11:24:47.916+08:00  INFO 18570 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-12-08T11:24:48.145+08:00  INFO 18570 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/test]   : Initializing Spring embedded WebApplicationContext
+2023-12-08T11:24:48.145+08:00  INFO 18570 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3284 ms
+2023-12-08T11:24:48.430+08:00  INFO 18570 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-08T11:24:48.650+08:00  INFO 18570 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4e80a001
+2023-12-08T11:24:48.653+08:00  INFO 18570 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-08T11:24:48.734+08:00  INFO 18570 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-08T11:24:48.858+08:00  INFO 18570 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-12-08T11:24:48.867+08:00  INFO 18570 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-08T11:24:49.204+08:00  INFO 18570 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-12-08T11:24:49.459+08:00  INFO 18570 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-08T11:24:49.595+08:00  INFO 18570 --- [main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@1570cad0
+2023-12-08T11:24:49.908+08:00  INFO 18570 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-12-08T11:24:50.934+08:00  INFO 18570 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-08T11:24:50.941+08:00  INFO 18570 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08T11:24:52.040+08:00  WARN 18570 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-08T11:24:52.696+08:00  INFO 18570 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/test'
+2023-12-08T11:24:52.712+08:00  INFO 18570 --- [main] com.wuw.Application                      : Started Application in 9.515 seconds (process running for 11.04)
+2023-12-08T11:24:58.557+08:00  INFO 18570 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/test]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08T11:24:58.558+08:00  INFO 18570 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-08T11:24:58.561+08:00  INFO 18570 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-08T11:25:45.372+08:00  WARN 18570 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s619ms).
+2023-12-08T11:25:45.529+08:00  INFO 18570 --- [http-nio-8080-exec-2] com.wuw.filter.LogFilter                 : Filter Logs : METHOD= POST; REQUSETURI = /test/Login; REQUSETBODY = {
+    "userId": "1077333",
+    "userName": "shiuan"
+}; RESPONSECODE = 200; RESPONSEBODY = {"code":"0000","msg":"交易成功","resModel":{}}; TIMETAKEN = 46944
+2023-12-08T11:25:45.713+08:00  INFO 18570 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08T11:25:45.777+08:00  INFO 18570 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-08T11:25:45.808+08:00  INFO 18570 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

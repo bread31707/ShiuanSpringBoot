@@ -14,11 +14,11 @@ public class ActionTest extends AbstractSvcLogic<ActionTestReq, ActionTestRes> {
     @Override
     public Result<ActionTestRes> doSvc(ActionTestReq reqModel, ActionTestRes resModel) {
 
-        String url = "";
-
-        ClientBuildUtils build = new ClientBuildUtils();
-        ClientUtils client = new ClientUtils();
-        client.sendPostRequest(url, reqModel, new Request.Builder());
+//        String url = "";
+//
+//        ClientBuildUtils build = new ClientBuildUtils();
+//        ClientUtils client = new ClientUtils();
+//        client.sendPostRequest(url, reqModel, new Request.Builder());
 
         return null;
     }

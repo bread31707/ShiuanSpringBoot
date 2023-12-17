@@ -1,5 +1,6 @@
 package com.wuw.core;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.wuw.core.model.SvcInfo;
 import com.wuw.core.model.SvcReqModel;
 import com.wuw.core.model.SvcResModel;
@@ -11,6 +12,6 @@ public abstract class AbstractSvcLogic<Req extends SvcReqModel, Res extends SvcR
     @Autowired
     protected SvcInfo svcInfo;
 
-    public abstract Result<Res> doSvc(Req reqModel, Res resModel);
+    public abstract Result<Res> doSvc(Req reqModel, Res resModel) throws JsonProcessingException;
 
 }

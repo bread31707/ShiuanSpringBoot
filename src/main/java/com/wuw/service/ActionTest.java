@@ -19,7 +19,7 @@ public class ActionTest extends AbstractSvcLogic<ActionTestReq, ActionTestRes> {
 
         String url = "http://localhost:8081/SupPost";
         String json = "{}";
-
+        String test = "";
         ClientUtils clientUtilsTest = new ClientUtils();
         String actionResponse = clientUtilsTest.sendPostRequest(url, json, new Request.Builder());
         ObjectMapper objectMapper = new ObjectMapper();

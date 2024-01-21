@@ -1,6 +1,8 @@
 package com.wuw.filter;
 
 import com.wuw.core.model.SvcInfo;
+import com.wuw.enums.ResultFields;
+import com.wuw.handler.AppException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -44,17 +46,20 @@ public class LogFilter extends OncePerRequestFilter {
     }
 
     private String getStringValue(byte[] contentAsByteArray, String characterEncoding) {
-
         try {
-            if(!characterEncoding.equals(StandardCharsets.UTF_8)) {
-                return new String(contentAsByteArray, StandardCharsets.UTF_8);
+            // 將 byte 陣列轉換成字串
+            String rawString;
+            if (!characterEncoding.equals(StandardCharsets.UTF_8)) {
+                rawString = new String(contentAsByteArray, StandardCharsets.UTF_8);
+            } else {
+                rawString = new String(contentAsByteArray, 0, contentAsByteArray.length, characterEncoding);
             }
-            return new String(contentAsByteArray, 0, contentAsByteArray.length, characterEncoding);
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
 
-        return "";
+            // 在字串內進行換行和 tab 的過濾
+            return rawString.replaceAll("\\s", "");
+        } catch (UnsupportedEncodingException e) {
+            throw new AppException(ResultFields.FAIL_ENCODING);
+        }
     }
 
 }

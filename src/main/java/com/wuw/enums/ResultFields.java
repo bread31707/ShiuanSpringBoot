@@ -12,7 +12,8 @@ public enum ResultFields {
     FAIL_ALGORITHM_MISMATCH("WS04", "加密算法不匹配"),
     FAIL_JWT_DECODE("WS05", "TOKEN解析失敗"),
     FAIL_TO_CONNECTION("WS06", "ACTION連線失敗"),
-    FAIL_TO_SSL_CONNECTION("WS06", "ACTION_SSL連線失敗");
+    FAIL_TO_SSL_CONNECTION("WS06", "ACTION_SSL連線失敗"),
+    FAIL_ENCODING("WS07","於LOGFILTER內編碼失敗");
 
 
     private String code;

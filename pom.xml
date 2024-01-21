@@ -74,4 +74,28 @@
         </dependency>
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.active>default</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>mac</id>
+            <properties>
+                <spring.profiles.active>mac</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>windows</id>
+            <properties>
+                <spring.profiles.active>windows</spring.profiles.active>
+            </properties>
+        </profile>
+    </profiles>
+
 </project>

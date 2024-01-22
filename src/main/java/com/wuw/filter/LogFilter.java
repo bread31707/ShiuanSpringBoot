@@ -45,21 +45,30 @@ public class LogFilter extends OncePerRequestFilter {
 
     }
 
-    private String getStringValue(byte[] contentAsByteArray, String characterEncoding) {
-        try {
-            // 將 byte 陣列轉換成字串
-            String rawString;
-            if (!characterEncoding.equals(StandardCharsets.UTF_8)) {
-                rawString = new String(contentAsByteArray, StandardCharsets.UTF_8);
-            } else {
-                rawString = new String(contentAsByteArray, 0, contentAsByteArray.length, characterEncoding);
-            }
+    // 後續研究, chatset 的部分
+//    private String getStringValue(byte[] contentAsByteArray, String characterEncoding) {
+//        try {
+//            // 將 byte 陣列轉換成字串
+//            String rawString;
+//            if (!characterEncoding.equals(StandardCharsets.UTF_8)) {
+//                rawString = new String(contentAsByteArray, StandardCharsets.UTF_8);
+//            } else {
+//                rawString = new String(contentAsByteArray, 0, contentAsByteArray.length, characterEncoding);
+//            }
+//
+//            // 在字串內進行換行和 tab 的過濾
+//            return rawString.replaceAll("\\s", "");
+//        } catch (UnsupportedEncodingException e) {
+//            throw new AppException(ResultFields.FAIL_ENCODING);
+//        }
+//    }
 
-            // 在字串內進行換行和 tab 的過濾
-            return rawString.replaceAll("\\s", "");
-        } catch (UnsupportedEncodingException e) {
-            throw new AppException(ResultFields.FAIL_ENCODING);
-        }
+    private String getStringValue(byte[] contentAsByteArray, String characterEncoding) {
+        // 將 byte 陣列轉換成字串
+        String rawString;
+        rawString = new String(contentAsByteArray, StandardCharsets.UTF_8);
+        // 在字串內進行換行和 tab 的過濾
+        return rawString.replaceAll("\\s", "");
     }
 
 }

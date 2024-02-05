@@ -1,8 +1,9 @@
 package com.wuw.filter;
 
 import com.wuw.core.model.SvcInfo;
-import com.wuw.enums.ResultFields;
-import com.wuw.handler.AppException;
+import com.wuw.utils.DateUtils;
+import com.wuw.utils.JacksonUtils;
+import com.wuw.utils.UuidUtils;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,9 +14,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.util.ContentCachingRequestWrapper;
 import org.springframework.web.util.ContentCachingResponseWrapper;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+
+import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+import java.util.stream.Collectors;
 
 public class LogFilter extends OncePerRequestFilter {
 
@@ -25,21 +29,24 @@ public class LogFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain chain) throws ServletException, IOException {
 
-
         ContentCachingRequestWrapper contentCachingRequestWrapper = new ContentCachingRequestWrapper(request);
         ContentCachingResponseWrapper contentCachingResponseWrapper = new ContentCachingResponseWrapper(response);
 
-        long startTime = System.currentTimeMillis();
+        String uuid = UuidUtils.generateUuid();
+        contentCachingRequestWrapper.setAttribute("uuid", uuid);
+
+        LocalDateTime startDateTime = DateUtils.getNowLocalDateTime();
+        LOGGER.info("【 REQUEST 】: SvcUuid= {}; Method= {}; Uri= {};",
+                uuid, request.getMethod(), request.getRequestURI());
 
         chain.doFilter(contentCachingRequestWrapper, contentCachingResponseWrapper);
 
-        long timeTaken = System.currentTimeMillis() - startTime;
-
+        LocalDateTime endDateTime = DateUtils.getNowLocalDateTime();
+        String timeTaken = String.valueOf(DateUtils.between(ChronoUnit.MILLIS, startDateTime, endDateTime));
         String requestBody = getStringValue(contentCachingRequestWrapper.getContentAsByteArray(), request.getCharacterEncoding());
         String responseBody = getStringValue(contentCachingResponseWrapper.getContentAsByteArray(), response.getCharacterEncoding());
-
-        LOGGER.info("Filter Logs : METHOD= {}; REQUSETURI = {}; REQUSETBODY = {}; RESPONSECODE = {}; RESPONSEBODY = {}; TIMETAKEN = {}",
-               request.getMethod(), request.getRequestURI(), requestBody, response.getStatus(), responseBody, timeTaken);
+        LOGGER.info("【 RESPONSE 】: SvcUuid= {}; StatusCode= {}; RequestBody={}; ResponseBody= {}; TimeTaken= {}",
+                uuid, response.getStatus(), requestBody, responseBody, timeTaken);
 
         contentCachingResponseWrapper.copyBodyToResponse();
 
@@ -55,14 +62,8 @@ public class LogFilter extends OncePerRequestFilter {
 //            } else {
 //                rawString = new String(contentAsByteArray, 0, contentAsByteArray.length, characterEncoding);
 //            }
-//
-//            // 在字串內進行換行和 tab 的過濾
-//            return rawString.replaceAll("\\s", "");
-//        } catch (UnsupportedEncodingException e) {
-//            throw new AppException(ResultFields.FAIL_ENCODING);
 //        }
 //    }
-
     private String getStringValue(byte[] contentAsByteArray, String characterEncoding) {
         // 將 byte 陣列轉換成字串
         String rawString;
@@ -71,4 +72,4 @@ public class LogFilter extends OncePerRequestFilter {
         return rawString.replaceAll("\\s", "");
     }
 
-}
+ }

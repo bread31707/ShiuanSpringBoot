@@ -1,7 +1,9 @@
 package com.wuw.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.wuw.core.AbstractSvcLogic;
 import com.wuw.enums.ResultFields;
+import com.wuw.handler.AppException;
 import com.wuw.redis.model.TestRedisModel;
 import com.wuw.service.request.RedisTestFindReq;
 import com.wuw.service.response.RedisTestFindRes;
@@ -16,12 +18,20 @@ public class RedisTestFind extends AbstractSvcLogic<RedisTestFindReq, RedisTestF
 
     @Autowired
     RedisTemplate redisTemplate;
+    @Autowired
+    JacksonUtils jacksonUtils;
+
 
     @Override
-    public Result<RedisTestFindRes> doSvc(RedisTestFindReq reqModel, RedisTestFindRes resModel) {
+    public Result<RedisTestFindRes> doSvc(RedisTestFindReq reqModel, RedisTestFindRes resModel){
 
         Object o = redisTemplate.opsForValue().get("key!!:QQ");
-        TestRedisModel testRedisModel = JacksonUtils.readValue(JacksonUtils.writeValueAsString(o), TestRedisModel.class).get();
+        TestRedisModel testRedisModel = null;
+        try {
+            testRedisModel = jacksonUtils.readValue(jacksonUtils.getObjectMapper().writeValueAsString(o), TestRedisModel.class).get();
+        } catch (JsonProcessingException e) {
+            throw new AppException(ResultFields.FAIL_JSON_CONVERT);
+        }
         resModel.setQ1(testRedisModel.getQ1());
         resModel.setQ2(testRedisModel.getQ2());
         resModel.setQ3(testRedisModel.getQ3());

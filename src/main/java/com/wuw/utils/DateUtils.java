@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 public class DateUtils {
 
@@ -29,6 +30,10 @@ public class DateUtils {
     }
     public static String localTimeFormat(LocalTime localTime, String pattern){
         return localTime.format(DateTimeFormatter.ofPattern(pattern));
+    }
+
+    public static long between(ChronoUnit chronoUnit, LocalDateTime temporal1Inclusive, LocalDateTime temporal2Exclusive) {
+        return chronoUnit.between(temporal1Inclusive, temporal2Exclusive);
     }
 
 }

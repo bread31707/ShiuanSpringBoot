@@ -5,6 +5,7 @@ import com.wuw.utils.UuidUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 import java.time.LocalDateTime;
@@ -16,7 +17,5 @@ public class SvcInfo {
 
     private final String uuid = UuidUtils.generateUuid();
     private final LocalDateTime startDateTime = DateUtils.getNowLocalDateTime();
-//    private HttpServletRequest httpServletRequest;
-//    private HttpServletResponse httpServletResponse;
 
 }

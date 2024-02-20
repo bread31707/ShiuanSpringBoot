@@ -1,6 +1,5 @@
 package com.wuw.filter;
 
-import com.wuw.core.model.SvcInfo;
 import com.wuw.utils.DateUtils;
 import com.wuw.utils.JacksonUtils;
 import com.wuw.utils.UuidUtils;

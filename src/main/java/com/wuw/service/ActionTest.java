@@ -1,35 +1,34 @@
 package com.wuw.service;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.wuw.action.TestAction;
+import com.wuw.action.request.TestActionReq;
+import com.wuw.action.response.TestActionRes;
 import com.wuw.core.AbstractSvcLogic;
 import com.wuw.enums.ResultFields;
 import com.wuw.service.request.ActionTestReq;
 import com.wuw.service.response.ActionTestRes;
-import com.wuw.utils.ClientUtils;
 import com.wuw.vo.Result;
-import okhttp3.Request;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ActionTest extends AbstractSvcLogic<ActionTestReq, ActionTestRes> {
+
+    @Autowired
+    TestAction testAction;
+
     @Override
     public Result<ActionTestRes> doSvc(ActionTestReq reqModel, ActionTestRes resModel){
 
-        String url = "http://localhost:8081/SupPost";
-        String json = "{}";
-        String test = "";
-        ClientUtils clientUtilsTest = new ClientUtils();
-        String actionResponse = clientUtilsTest.sendPostRequest(url, json, new Request.Builder());
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            ActionTestRes actionTestRes = objectMapper.readValue(actionResponse, ActionTestRes.class);
-            resModel.setAemInfoList(actionTestRes.getAemInfoList());
+        TestActionRes testActionRes = testAction.doAction(buildTestActionReq());
+        resModel.setAemInfoList(testActionRes.getAemInfoList());
 
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
         return new Result<>(ResultFields.SUCCEDD, resModel);
     }
+
+    private TestActionReq buildTestActionReq(){
+        TestActionReq model = new TestActionReq();
+        return model;
+    }
+
 }

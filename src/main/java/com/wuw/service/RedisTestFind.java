@@ -18,8 +18,7 @@ public class RedisTestFind extends AbstractSvcLogic<RedisTestFindReq, RedisTestF
 
     @Autowired
     RedisTemplate redisTemplate;
-    @Autowired
-    JacksonUtils jacksonUtils;
+    JacksonUtils jacksonUtils = new JacksonUtils();
 
 
     @Override

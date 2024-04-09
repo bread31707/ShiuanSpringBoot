@@ -33,8 +33,6 @@ public class TestInfoAdd extends AbstractSvcLogic<TestInfoAddReq, TestInfoAddRes
         testInfoEntity.setValue(reqModel.getValue());
         testInfoRepository.save(testInfoEntity);
 
-        LOGGER.info("hello");
-
         return new Result<>(ResultFields.SUCCEDD, resModel);
     }
 

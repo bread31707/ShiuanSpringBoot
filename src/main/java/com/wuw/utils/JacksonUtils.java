@@ -16,8 +16,8 @@ public class JacksonUtils {
 
     private final ObjectMapper defaultObjectMapper;
 
-    public JacksonUtils(ObjectMapper objectMapper) {
-        this.defaultObjectMapper = objectMapper;
+    public JacksonUtils() {
+        this.defaultObjectMapper = new ObjectMapper();
     }
 
     public ObjectNode getObjectNode() {

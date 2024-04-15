@@ -88,7 +88,6 @@ public class ActionLogAspect {
         log.info("【ActionRequest】: " + objectNode);
     }
 
-    // 用overload 寫一個多帶一個 e.message 參數的方法！
     private void writeEndLog(ActionEndModel model) {
         ObjectNode objectNode = jacksonUtils.getObjectNode();
         objectNode.put("svcUuid", model.getSvcUuid());
